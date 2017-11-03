@@ -2,7 +2,7 @@
 
 import UIKit
 
-struct BatchUpdate {
+public struct BatchUpdate {
     let deletions: [IndexPath]
     let insertions: [IndexPath]
     let moves: [(from: IndexPath, to: IndexPath)]
@@ -35,7 +35,7 @@ struct BatchUpdate {
     }
 }
     
-struct NestedBatchUpdate {
+public struct NestedBatchUpdate {
     let itemDeletions: [IndexPath]
     let itemInsertions: [IndexPath]
     let itemMoves: [(from: IndexPath, to: IndexPath)]
