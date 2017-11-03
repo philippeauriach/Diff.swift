@@ -3,11 +3,11 @@
 import UIKit
 
 public struct BatchUpdate {
-    let deletions: [IndexPath]
-    let insertions: [IndexPath]
-    let moves: [(from: IndexPath, to: IndexPath)]
+    public let deletions: [IndexPath]
+    public let insertions: [IndexPath]
+    public let moves: [(from: IndexPath, to: IndexPath)]
 
-    init(
+    public init(
         diff: ExtendedDiff,
         indexPathTransform: (IndexPath) -> IndexPath = { $0 }
         ) {
@@ -36,14 +36,14 @@ public struct BatchUpdate {
 }
     
 public struct NestedBatchUpdate {
-    let itemDeletions: [IndexPath]
-    let itemInsertions: [IndexPath]
-    let itemMoves: [(from: IndexPath, to: IndexPath)]
-    let sectionDeletions: IndexSet
-    let sectionInsertions: IndexSet
-    let sectionMoves: [(from: Int, to: Int)]
+    public let itemDeletions: [IndexPath]
+    public let itemInsertions: [IndexPath]
+    public let itemMoves: [(from: IndexPath, to: IndexPath)]
+    public let sectionDeletions: IndexSet
+    public let sectionInsertions: IndexSet
+    public let sectionMoves: [(from: Int, to: Int)]
     
-    init(
+    public init(
         diff: NestedExtendedDiff,
         indexPathTransform: (IndexPath) -> IndexPath = { $0 },
         sectionTransform: (Int) -> Int = { $0 }
